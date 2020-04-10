@@ -1,5 +1,5 @@
 # jinfuWholesalerMall
-## 使用分布式架构实现
+## 微服务架构
 ### 模块介绍
 #### jinfu-panrent
 1、统一管理项目依赖的版本号\
