@@ -52,7 +52,7 @@ public class AutoGenCode {
         StringBuffer projectPath = new StringBuffer(System.getProperty("user.dir"));
         // System.out.println(projectPath);
         // /Users/xbb1973/Documents/code/workdir/jinfu_mall
-        String soaName = scanner("微服务名称，例如jinfu-parent/ jinfu-user等");
+        String soaName = scanner("子模块/ or 微服务/ 名称，例如jinfu-parent/ jinfu-user等");
         projectPath.append("/");
         projectPath.append(soaName);
         gc.setOutputDir(projectPath + "/src/main/java");
@@ -74,8 +74,8 @@ public class AutoGenCode {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("模块名"));
-        pc.setParent("slf.xbb");
+        pc.setParent(scanner("子模块的包前缀 slf.xbb/ org.jinfu/"));
+        pc.setModuleName(scanner("子模块的模块名"));
         mpg.setPackageInfo(pc);
 
         // 自定义配置
